@@ -1,10 +1,11 @@
 import React from 'react'
 import Player from './Player'
+import { connect } from 'react-redux'
 
 const Team = ({ team, selectPlayer }) => {
 
   const renderedPlayers = team.players.map(player => {
-    return <Player key={player.id} player={player} selectPlayer={selectPlayer}/>
+    return <Player key={player.id} player={player}/>
   })
 
   return (
@@ -15,5 +16,6 @@ const Team = ({ team, selectPlayer }) => {
     </div>
   )
 }
+
 
 export default Team
